@@ -7,7 +7,7 @@
 import pymongo
 import datetime
 
-from items import ZillowItem, ZillowStatusItem
+from items import ZillowItem
 
 class MongoPipeline(object):
 
@@ -32,6 +32,5 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        # if isinstance(item, ZillowItem):
         self.db[self.collection_name].insert(dict(item))
         return item
