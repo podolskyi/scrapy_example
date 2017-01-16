@@ -38,3 +38,4 @@ class MongoPipeline(object):
         return item
 
 # Finish line
+# Add new end line
