@@ -11,7 +11,9 @@ from items import ZillowItem
 
 class MongoPipeline(object):
 
+    # collection name in mongodb
     collection_name = 'zillow_listings'
+
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
